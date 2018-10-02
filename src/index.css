@@ -20,20 +20,20 @@ $brakepoint argument choices:
   box-sizing: inherit;
 }
 
-html {
+/* html {
   font-size: 62.5%;
-}
+} */
 
 body {
   color: #777;
-  font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif;
+  /* font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif; */
 }
 
-.nav .brand-logo {
+/* .nav .brand-logo {
   font-size: 3.1rem !important;
 }
 
 .nav ul a {
   font-size: 1.6rem !important;
-}
+} */
