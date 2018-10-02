@@ -12,7 +12,7 @@ $brakepoint argument choices:
   ** ORDER OF MEDIA QUERIES: Base + Typography > general layout + grid > page layout > components **
 */
 
-*,
+/* *,
 *::after,
 *::before {
   margin: 0;
@@ -28,4 +28,4 @@ body {
   color: #777;
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
-}
+} */
