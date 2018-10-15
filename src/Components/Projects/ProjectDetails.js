@@ -5,7 +5,6 @@ import { compose } from 'redux'
 
 
 const ProjectDetails = (props) => {
-  // console.log(props)
   const { project } = props
   if(project) {
     return (
@@ -32,7 +31,6 @@ const ProjectDetails = (props) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state)
   const id = ownProps.match.params.id
   const projects = state.firestore.data.projects
   const project = projects ? projects[id] : null
@@ -41,7 +39,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([{collection: 'projects'}])
-)(ProjectDetails)
+export default compose(connect(mapStateToProps), firestoreConnect([{collection: 'projects'}]))(ProjectDetails)
