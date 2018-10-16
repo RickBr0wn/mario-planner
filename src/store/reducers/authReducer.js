@@ -2,7 +2,7 @@ const initState = {
   authError: null
 }
 
-const authReducer = (state = initState, { type }) => {
+const authReducer = (state = initState, { type, err }) => {
   console.log('login failed')
   switch (type) {
     case 'LOGIN_ERROR':
@@ -19,6 +19,19 @@ const authReducer = (state = initState, { type }) => {
     case 'SIGNOUT_SUCCESS':
       console.log('login ok')
       return state
+
+    case 'SIGNUP_SUCCESS':
+      console.log('signup success')
+      return {
+        ...state,
+        authError: null
+      }
+    case 'SIGNUP_ERROR':
+    console.log('signup error')
+    return {
+      ...state,
+      authError: err.message
+    }
     default:
       return state
   }
