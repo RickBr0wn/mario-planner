@@ -22,6 +22,7 @@ class CreateProject extends Component {
 
   render() {
     const { auth } = this.props
+    // Check to see if the user is logged in
     if(!auth.uid) return <Redirect to="/signin" />
     return (
       <div className="container">
