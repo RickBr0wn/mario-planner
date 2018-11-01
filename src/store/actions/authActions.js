@@ -29,8 +29,8 @@ export const signUp = newUser => {
     firebase.auth().createUserWithEmailAndPassword(
       newUser.email,
       newUser.password
-    ).then((res) => {
-      return firestore.collection('users').doc(res.uid).set({
+    ).then((response) => {
+      return firestore.collection('users').doc(response.user.uid).set({
         firstName: newUser.firstName,
         lastName: newUser.lastName,
         initials: newUser.firstName[0] + newUser.lastName[0]
