@@ -8,12 +8,14 @@ const Navbar = props => {
   const { auth, profile } = props
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />
   return (
-    <nav className="nav nav-wrapper grey darken-3">
-      <div className="container">
-        <Link to="/" className="brand-logo">Mario Planner</Link>        
-        {links}
-      </div>
-    </nav>
+    <div className="navbar-fixed">
+      <nav className="nav nav-wrapper grey darken-3">
+        <div className="container">
+          <Link to="/" className="brand-logo">Mario Planner</Link>        
+          {links}
+        </div>
+      </nav>
+    </div>
   )
 }
 
